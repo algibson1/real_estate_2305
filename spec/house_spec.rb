@@ -89,12 +89,12 @@ RSpec.describe House do
             expect(@house.price_per_square_foot).to eq(210.53)
         end
 
-        it 'can sort rooms by area' do
+        it 'can sort rooms by area (greatest to least)' do
             expect(@house.rooms_sorted_by_area).to eq([@room_4, @room_3, @room_2, @room_1])
         end
 
         it 'can list all rooms by category' do
-            expect(@house.rooms_by_category).to eq({:bedroom=>[@room_1, @room_2], :living_room=> [@room_3], :basement=> [@room_4]}
+            expect(@house.rooms_by_category).to eq({:bedroom=>[@room_1, @room_2], :living_room=> [@room_3], :basement=> [@room_4]})
         end
     end
 end
